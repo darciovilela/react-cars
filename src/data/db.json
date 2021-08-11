@@ -1,0 +1,46 @@
+{
+  "cars": [
+  {
+    "ranking": "1",
+    "model": "GM Onix",
+    "units": "241.214",
+    "dezenove": true,
+    "vinte": false,
+    "id": 1
+
+   },
+  {
+    "ranking": "1",
+    "model": "GM Onix",
+    "units": "241.214",
+    "dezenove": true,
+    "vinte": false,
+    "id": 2
+  },
+  {
+    "ranking": "1",
+    "model": "GM Onix",
+    "units": "241.214",
+    "dezenove": true,
+    "vinte": false,
+    "id": 3
+  },
+  {
+    "ranking": "1",
+    "model": "GM Onix",
+    "units": "241.214",
+    "dezenove": false,
+    "vinte": true,
+    "id": 4
+  },
+  {
+    "ranking": "1",
+    "model": "GM Onix",
+    "units": "241.214",
+    "dezenove": false,
+    "vinte": true,
+    "id": 5
+  }
+
+]
+}
