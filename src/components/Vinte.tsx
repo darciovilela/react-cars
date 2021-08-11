@@ -32,14 +32,14 @@ export const Vinte = () => {
       <h1>Best Selling in 2019</h1>
       <VinteForm setDate={setDate} />
       <table className="center">
-        <thead className="dezenove-table-head">
+        <thead className="table-head">
           <tr>
             <th>Ranking</th>
             <th>Model</th>
             <th>Units</th>
           </tr>
         </thead>
-        <tbody className="dezenove-table-body">
+        <tbody className="table-body">
           {vinte.map((item) => {
             return (
               <tr>

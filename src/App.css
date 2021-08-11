@@ -3,9 +3,9 @@
 }
 
 .App-logo {
-  height: 6vmin;
+  height: 8vmin;
   pointer-events: none;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .App-header {
@@ -53,7 +53,7 @@ p.header {
 h1 {
   font-size: 25px;
   color: #4f5052;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 table {
@@ -80,7 +80,7 @@ td {
 }
 
 .table-head {
-  background-color: #0c6880;
+  background-color: #000000;
   font-size: 18px;
   color: white;
   text-align: center;
