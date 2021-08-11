@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Vinte } from './Vinte';
+import { Car } from '../interfaces/cars';
 
 // estado inicial do form vazio
-const emptyVinte: Vinte = {
+const emptyVinte: Car = {
   ranking: '',
   model: '',
   units: '',
@@ -16,8 +16,8 @@ interface IProps {
 export const VinteForm: React.FC<IProps> = ({ setDate }) => {
   const [formState, setFormState] = useState(emptyVinte);
 
-  const Vinte = async (vinte: Vinte) => {
-    const result = await axios.post<Vinte>('http://localhost:4000/cars', vinte);
+  const Vinte = async (vinte: Car) => {
+    const result = await axios.post<Car>('http://localhost:4000/cars', vinte);
   };
 
   const handleChange = (event: any) => {

@@ -1,39 +1,44 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { DezenoveForm } from './DezenoveForm';
+import { emptyCar } from '../interfaces/Cars';
+import { useList } from '../hooks/useList';
 
-export interface Dezenove {
-  id?: string;
-  ranking: string;
-  model: string;
-  units: string;
+export const Dezenove = () => {
+  const {
+    car,
+    activeRecord,
+    setActiveRecord,
+    setDate,
+    deleteCar,
+    loading,
+    error,
+  } = useList(emptyCar, 'dezenove=true');
+
 }
 
-// eslint-disable-next-line @typescript-eslint/no-redeclare
-export const Dezenove = () => {
-  const [dezenove, setDezenove] = useState<Dezenove[]>([]);
-  const [date, setDate] = useState(+new Date());
+if (loading) {
+  return <div>Loading...</div>;
+}
 
-  // componentDidMount or variable date was changed
-  useEffect(() => {
-    const callFetchFunction = async () => {
-      const result = await axios.get<Dezenove[]>('http://localhost:4000/cars');
-      setDezenove(result.data);
-    };
-    callFetchFunction();
-  }, [date]);
-
-  if (!dezenove.length) {
-    return <div>Loading... (or empty)</div>;
-  }
+if (error) {
+  return (
+    <div className="error">
+      <pre>{JSON.stringify(error, null, 2)}</pre>
+    </div>
+  );
+}
 
   return (
     <div>
       <h1>Best Selling in 2019</h1>
-      <DezenoveForm setDate={setDate} />
+      <button onClick={() => setActiveRecord(emptyCar)}>
+      Insert New
+      </button>
+      <DezenoveForm setDate={setDate} activeRecord={activeRecord} />
       <table className="center">
         <thead className="table-head">
           <tr>
+            <th>E</th>
+            <th>X</th>
             <th>Ranking</th>
             <th>Model</th>
             <th>Units</th>
@@ -43,6 +48,21 @@ export const Dezenove = () => {
           {dezenove.map((item) => {
             return (
               <tr>
+                key={item.id}
+                className={activeRecord === item ? 'active' : ''}
+              >
+                <td>
+                  <button
+                    onClick={() => {
+                      setActiveRecord(item);
+                    }}
+                  >
+                    E
+                  </button>
+                </td>
+                <td>
+                  <button onClick={() => deleteCar(item)}>X</button>
+                </td>
                 <td>{item.ranking}</td>
                 <td>{item.model}</td>
                 <td>{item.units}</td>

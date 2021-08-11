@@ -2,22 +2,17 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { VinteForm } from './VinteForm';
 
-export interface Vinte {
-  id?: string;
-  ranking: string;
-  model: string;
-  units: string;
-}
+import { Car } from '../interfaces/cars';
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export const Vinte = () => {
-  const [vinte, setVinte] = useState<Vinte[]>([]);
+  const [vinte, setVinte] = useState<Car[]>([]);
   const [date, setDate] = useState(+new Date());
 
   // componentDidMount or variable date was changed
   useEffect(() => {
     const callFetchFunction = async () => {
-      const result = await axios.get<Vinte[]>('http://localhost:4000/cars');
+      const result = await axios.get<Car[]>('http://localhost:4000/cars');
       setVinte(result.data);
     };
     callFetchFunction();
