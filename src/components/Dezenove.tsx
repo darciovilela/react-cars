@@ -1,38 +1,34 @@
 import { DezenoveForm } from './DezenoveForm';
-import { emptyCar } from '../interfaces/Cars';
+import { emptyCar } from '../interfaces/cars';
 import { useList } from '../hooks/useList';
 
 export const Dezenove = () => {
   const {
     car,
+    setDate,
     activeRecord,
     setActiveRecord,
-    setDate,
     deleteCar,
     loading,
     error,
   } = useList(emptyCar, 'dezenove=true');
 
-}
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-if (loading) {
-  return <div>Loading...</div>;
-}
-
-if (error) {
-  return (
-    <div className="error">
-      <pre>{JSON.stringify(error, null, 2)}</pre>
-    </div>
-  );
-}
+  if (error) {
+    return (
+      <div className="error">
+        <pre>{JSON.stringify(error, null, 2)}</pre>
+      </div>
+    );
+  }
 
   return (
     <div>
       <h1>Best Selling in 2019</h1>
-      <button onClick={() => setActiveRecord(emptyCar)}>
-      Insert New
-      </button>
+      <button onClick={() => setActiveRecord(emptyCar)}>Insert New</button>
       <DezenoveForm setDate={setDate} activeRecord={activeRecord} />
       <table className="center">
         <thead className="table-head">
@@ -45,9 +41,9 @@ if (error) {
           </tr>
         </thead>
         <tbody className="table-body">
-          {dezenove.map((item) => {
+          {car.map((item) => {
             return (
-              <tr>
+              <tr
                 key={item.id}
                 className={activeRecord === item ? 'active' : ''}
               >

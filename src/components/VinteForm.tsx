@@ -1,38 +1,19 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Car } from '../interfaces/cars';
-
-// estado inicial do form vazio
-const emptyVinte: Car = {
-  ranking: '',
-  model: '',
-  units: '',
-};
+import { emptyCar } from '../interfaces/cars';
+import { useForm } from '../hooks/useForm';
 
 interface IProps {
   setDate: Function;
+  activeRecord: Car;
 }
 
-export const VinteForm: React.FC<IProps> = ({ setDate }) => {
-  const [formState, setFormState] = useState(emptyVinte);
-
-  const Vinte = async (vinte: Car) => {
-    const result = await axios.post<Car>('http://localhost:4000/cars', vinte);
-  };
-
-  const handleChange = (event: any) => {
-    setFormState({
-      ...formState,
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
-    createVinte(formState);
-    setDate(+new Date());
-    setFormState(emptyVinte);
-  };
+export const VinteForm: React.FC<IProps> = ({ setDate, activeRecord }) => {
+  const { formState, handleChange, handleSubmit } = useForm(
+    setDate,
+    activeRecord,
+    emptyCar,
+    { dezenove: false, vinte: true }
+  );
 
   return (
     <div>
@@ -42,7 +23,7 @@ export const VinteForm: React.FC<IProps> = ({ setDate }) => {
           <input
             className="center"
             type="text"
-            name="year"
+            name="ranking"
             value={formState.ranking}
             onChange={handleChange}
           />
@@ -52,7 +33,7 @@ export const VinteForm: React.FC<IProps> = ({ setDate }) => {
           <input
             className="center"
             type="text"
-            name="champion"
+            name="model"
             value={formState.model}
             onChange={handleChange}
           />
@@ -62,7 +43,7 @@ export const VinteForm: React.FC<IProps> = ({ setDate }) => {
           <input
             className="center"
             type="text"
-            name="vice"
+            name="units"
             value={formState.units}
             onChange={handleChange}
           />
@@ -72,6 +53,3 @@ export const VinteForm: React.FC<IProps> = ({ setDate }) => {
     </div>
   );
 };
-function createVinte(formState: Vinte) {
-  throw new Error('Function not implemented.');
-}

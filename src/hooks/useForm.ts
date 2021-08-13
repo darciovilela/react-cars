@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Car, CarFlags } from '../interfaces/cars';
+import { Car, CarFlags, emptyCar } from '../interfaces/cars';
 
 export const useForm = (
   setDate: Function,

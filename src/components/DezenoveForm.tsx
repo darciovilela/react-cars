@@ -23,7 +23,7 @@ export const DezenoveForm: React.FC<IProps> = ({ setDate, activeRecord }) => {
           <input
             className="center"
             type="text"
-            name="year"
+            name="ranking"
             value={formState.ranking}
             onChange={handleChange}
           />
@@ -33,7 +33,7 @@ export const DezenoveForm: React.FC<IProps> = ({ setDate, activeRecord }) => {
           <input
             className="center"
             type="text"
-            name="champion"
+            name="model"
             value={formState.model}
             onChange={handleChange}
           />
@@ -43,7 +43,7 @@ export const DezenoveForm: React.FC<IProps> = ({ setDate, activeRecord }) => {
           <input
             className="center"
             type="text"
-            name="vice"
+            name="units"
             value={formState.units}
             onChange={handleChange}
           />
