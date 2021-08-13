@@ -1,6 +1,25 @@
 import logo from '../img/car.png';
 
-export const Header = () => {
+interface IProps {
+  page: string;
+  setPage: Function;
+}
+
+const pages = ['Dezenove', 'Vinte'];
+
+export const Header = (props: IProps) => {
+  const menuItem = (pageName: string) => {
+    return (
+      <li
+        key={pageName}
+        onClick={() => props.setPage(pageName)}
+        className={props.page === pageName ? 'active' : ''}
+      >
+        {pageName}
+      </li>
+    );
+  };
+
   return (
     <header className="App-header">
       <div>
@@ -10,6 +29,9 @@ export const Header = () => {
         Brasil's Best Selling Cars <br />
         2019 - 2020
       </p>
+      <div>
+        <ul>{pages.map((item) => menuItem(item))}</ul>
+      </div>
     </header>
   );
 };
