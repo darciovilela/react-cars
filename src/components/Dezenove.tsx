@@ -1,4 +1,5 @@
 import { DezenoveForm } from './DezenoveForm';
+import { ErrorBox } from './ErrorBox';
 import { emptyCar } from '../interfaces/cars';
 import { useList } from '../hooks/useList';
 
@@ -17,13 +18,7 @@ export const Dezenove = () => {
     return <div>Loading...</div>;
   }
 
-  if (error) {
-    return (
-      <div className="error">
-        <pre>{JSON.stringify(error, null, 2)}</pre>
-      </div>
-    );
-  }
+  if (error) return <ErrorBox error={error} />;
 
   return (
     <div>
