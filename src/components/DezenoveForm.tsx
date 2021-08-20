@@ -1,3 +1,4 @@
+import { ErrorBox } from './ErrorBox';
 import { Car } from '../interfaces/cars';
 import { emptyCar } from '../interfaces/cars';
 import { useForm } from '../hooks/useForm';
@@ -8,7 +9,7 @@ interface IProps {
 }
 
 export const DezenoveForm: React.FC<IProps> = ({ setDate, activeRecord }) => {
-  const { formState, handleChange, handleSubmit } = useForm(
+  const { formState, handleChange, handleSubmit, error } = useForm(
     setDate,
     activeRecord,
     emptyCar,
@@ -17,6 +18,7 @@ export const DezenoveForm: React.FC<IProps> = ({ setDate, activeRecord }) => {
 
   return (
     <div>
+      {error && <ErrorBox error={error} />}
       <form onSubmit={handleSubmit}>
         <div>
           <label>Ranking:</label>

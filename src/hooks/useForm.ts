@@ -9,6 +9,7 @@ export const useForm = (
   formParams: CarFlags
 ) => {
   const [formState, setFormState] = useState(activeRecord);
+  const [error, setError] = useState<Error>();
 
   useEffect(() => {
     setFormState(activeRecord);
@@ -34,14 +35,19 @@ export const useForm = (
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
-    if (formState.id) {
-      await updateCar(formState);
-    } else {
-      await createCar(formState);
+    try {
+      setError(undefined);
+      if (formState.id) {
+        await updateCar(formState);
+      } else {
+        await createCar(formState);
+      }
+      setDate(+new Date());
+      setFormState(emptyCar);
+    } catch (e) {
+      setError(e);
     }
-    setDate(+new Date());
-    setFormState(emptyCar);
   };
 
-  return { formState, handleChange, handleSubmit };
+  return { formState, handleChange, handleSubmit, error };
 };
