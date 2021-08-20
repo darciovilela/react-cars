@@ -1,46 +1,100 @@
 {
   "cars": [
-  {
-    "ranking": "1",
-    "model": "GM Onix",
-    "units": "241.214",
-    "dezenove": true,
-    "vinte": false,
-    "id": 1
-
-   },
-  {
-    "ranking": "1",
-    "model": "GM Onix",
-    "units": "241.214",
-    "dezenove": true,
-    "vinte": false,
-    "id": 2
-  },
-  {
-    "ranking": "1",
-    "model": "GM Onix",
-    "units": "241.214",
-    "dezenove": true,
-    "vinte": false,
-    "id": 3
-  },
-  {
-    "ranking": "1",
-    "model": "GM Onix",
-    "units": "241.214",
-    "dezenove": false,
-    "vinte": true,
-    "id": 4
-  },
-  {
-    "ranking": "1",
-    "model": "GM Onix",
-    "units": "241.214",
-    "dezenove": false,
-    "vinte": true,
-    "id": 5
-  }
-
-]
+    {
+      "ranking": "1",
+      "model": "GM Onix",
+      "units": "241.214",
+      "dezenove": true,
+      "vinte": false,
+      "id": 1
+    },
+    {
+      "ranking": "2",
+      "model": "Ford Ka",
+      "units": "104.331",
+      "dezenove": true,
+      "vinte": false,
+      "id": 2
+    },
+    {
+      "ranking": "3",
+      "model": "Hyundai HB20",
+      "units": "101.590",
+      "dezenove": true,
+      "vinte": false,
+      "id": 3
+    },
+    {
+      "ranking": "1",
+      "model": "GM Onix",
+      "units": "241.214",
+      "dezenove": false,
+      "vinte": true,
+      "id": 4
+    },
+    {
+      "ranking": "1",
+      "model": "GM Onix",
+      "units": "241.214",
+      "dezenove": false,
+      "vinte": true,
+      "id": 5
+    },
+    {
+      "ranking": "4",
+      "model": "Renault Kwid",
+      "units": "85.117",
+      "dezenove": true,
+      "vinte": false,
+      "id": 6
+    },
+    {
+      "ranking": "5",
+      "model": "VW Gol",
+      "units": "81.285",
+      "dezenove": true,
+      "vinte": false,
+      "id": 7
+    },
+    {
+      "ranking": "6",
+      "model": "Fiat Argo",
+      "units": "79.001",
+      "dezenove": true,
+      "vinte": false,
+      "id": 8
+    },
+    {
+      "ranking": "7",
+      "model": "GM Prisma",
+      "units": "73.721",
+      "dezenove": true,
+      "vinte": false,
+      "id": 9
+    },
+    {
+      "ranking": "8",
+      "model": "VW Polo",
+      "units": "72.057",
+      "dezenove": true,
+      "vinte": false,
+      "id": 10
+    },
+    {
+      "ranking": "9",
+      "model": "Jeep Renegade",
+      "units": "68.726",
+      "dezenove": true,
+      "vinte": false,
+      "id": 11
+    },
+    {
+      "ranking": "10",
+      "model": "Jeep Compass",
+      "units": "60.362",
+      "dezenove": true,
+      "vinte": false,
+      "id": 12
+    }
+  ]
 }
