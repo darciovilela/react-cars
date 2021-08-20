@@ -27,15 +27,15 @@
     {
       "ranking": "1",
       "model": "GM Onix",
-      "units": "241.214",
+      "units": "135.351",
       "dezenove": false,
       "vinte": true,
       "id": 4
     },
     {
-      "ranking": "1",
-      "model": "GM Onix",
-      "units": "241.214",
+      "ranking": "2",
+      "model": "Hyundai HB20",
+      "units": "86.548",
       "dezenove": false,
       "vinte": true,
       "id": 5
@@ -95,6 +95,70 @@
       "dezenove": true,
       "vinte": false,
       "id": 12
+    },
+    {
+      "ranking": "3",
+      "model": "Chevrolet Onix Plus",
+      "units": "83.392",
+      "dezenove": false,
+      "vinte": true,
+      "id": 13
+    },
+    {
+      "ranking": "4",
+      "model": "Fiat Strada",
+      "units": "80.041",
+      "dezenove": false,
+      "vinte": true,
+      "id": 14
+    },
+    {
+      "ranking": "5",
+      "model": " VW Gol",
+      "units": "71.151",
+      "dezenove": false,
+      "vinte": true,
+      "id": 15
+    },
+    {
+      "ranking": "6",
+      "model": "Ford Ka",
+      "units": "67.491",
+      "dezenove": false,
+      "vinte": true,
+      "id": 16
+    },
+    {
+      "ranking": "7",
+      "model": "Fiat Argo",
+      "units": "65.937",
+      "dezenove": false,
+      "vinte": true,
+      "id": 17
+    },
+    {
+      "ranking": "8",
+      "model": "VW T-Cross",
+      "units": "60.119",
+      "dezenove": false,
+      "vinte": true,
+      "id": 18
+    },
+    {
+      "ranking": "9",
+      "model": "Jeep Renegade",
+      "units": "56.865",
+      "dezenove": false,
+      "vinte": true,
+      "id": 19
+    },
+    {
+      "ranking": "10",
+      "model": "Fiat Toro",
+      "units": "53.974",
+      "dezenove": false,
+      "vinte": true,
+      "id": 20
     }
   ]
 }
