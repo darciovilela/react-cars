@@ -26,7 +26,7 @@ export const Header = (props: IProps) => {
         <img src={logo} className="App-logo" alt="logo" />
       </div>
       <p className="p-header">
-        Brasil's Best Selling Cars <br />
+        Brazil's Best Selling Cars <br />
         2019 - 2020
       </p>
       <div>
