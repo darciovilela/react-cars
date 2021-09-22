@@ -10,7 +10,7 @@ Best selling cars in Brazil.
 
 ## Running locally
 - git clone https://github.com/darciovilela/react-cars.git
-- cd react-movies
+- cd react-cars
 
 ## Install dependencies
 - yarn
